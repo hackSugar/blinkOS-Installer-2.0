@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+/blinkOS Installer/.vs/blinkOS Installer/v16/Browse.VC.db
+/blinkOS Installer/.vs/blinkOS Installer/v16/ipch/AutoPCH/5ed0bf3a77d9e1b0
+/blinkOS Installer/.vs/blinkOS Installer/v16
+/blinkOS Installer 2-0/.vs/blinkOS Installer 2-0/v16/Browse.VC.opendb
