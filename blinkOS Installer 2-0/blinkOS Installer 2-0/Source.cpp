@@ -119,7 +119,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	switch (message)
 	{
 	case WM_PAINT:
-		hdc = BeginPaint(hWnd, &ps);
+		hdc = BeginPaint(hWnd, &ps); //hdc = handler to device context
 
 		// Here your application is laid out.
 		// For this introduction, we just print out "Hello, Windows desktop!"
