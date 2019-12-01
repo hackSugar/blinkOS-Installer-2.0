@@ -115,18 +115,30 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	PAINTSTRUCT ps;
 	HDC hdc; //handler to device context
 	TCHAR greeting[] = _T("Hello, Windows desktop!");
-
+	HWND hwndButton;
 	switch (message)
 	{
 	case WM_PAINT:
 		hdc = BeginPaint(hWnd, &ps); //hdc = handler to device context
 
 		// Here your application is laid out.
-		// For this introduction, we just print out "Hello, Windows desktop!"
-		// in the top left corner.
 		SetTextAlign(hdc, TA_CENTER);
 		FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW + 1));
-		TextOut(hdc, 0, 0, _T("Hello World"), _tcslen(_T("Hello World")));
+		TextOut(hdc, 50, 5, _T("Install blinkOS"), _tcslen(_T("Install blinkOS")));
+		 hwndButton = CreateWindow(
+			L"BUTTON",
+			L"OK", // button text
+			WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON, // styles
+			50, // x position
+			30, // y position
+			100, //width
+			100, //height
+			hWnd, //parent window
+			NULL, //no menu
+			(HINSTANCE)GetWindowLong(hWnd, GWL_HINSTANCE),
+			NULL //pointer not required
+		);
+
 
 		// End application-specific layout section.
 
